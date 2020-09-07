@@ -5,7 +5,7 @@ const API_KEY = "45aaa6eb";
 
 const apiURL = `https://www.omdbapi.com/?apikey=${API_KEY}`;
 
-function Search() {
+function Search( { checkNominations, nominate }) {
   const [movieTitle, setMovieTitle] = useState("");
   const [searchResults, setSearchResults] = useState([]);
 
@@ -23,7 +23,7 @@ function Search() {
     return (
       <li key={movie.imdbID}>
         <p>{movie.Title} ({movie.Year})</p>
-        <button> Nominate </button>
+        <button onClick={() => nominate(movie.imdbID)} disabled={!checkNominations(movie.imdbID)}> Nominate </button>
       </li> 
     )
   })
