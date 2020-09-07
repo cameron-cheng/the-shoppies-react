@@ -2,11 +2,10 @@ import React from "react";
 
 function Nomination({ nominations }) {
   console.log('nominations :>> ', nominations);
-  const nominees = nominations.map((nominee) => {
-    console.log('nominee :>> ', nominee);
+  const nominees = nominations.map((movie) => {
     return (
       <li> 
-        <p>{nominee}</p>
+        <p>{movie.Title}</p>
         <button> Remove </button>
       </li>
     )

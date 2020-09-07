@@ -23,7 +23,7 @@ function Search( { checkNominations, nominate }) {
     return (
       <li key={movie.imdbID}>
         <p>{movie.Title} ({movie.Year})</p>
-        <button onClick={() => nominate(movie.imdbID)} disabled={!checkNominations(movie.imdbID)}> Nominate </button>
+        <button onClick={() => nominate(movie)} disabled={!checkNominations(movie.imdbID)}> Nominate </button>
       </li> 
     )
   })
