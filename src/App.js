@@ -6,6 +6,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import "./App.css";
 
+
 function App() {
   const [nominationList, setNominationList] = useState(() => {
     const storedNominationList = localStorage.getItem("nominationList");
@@ -25,7 +26,6 @@ function App() {
 
   const nominate = (movie) => {
     setNominationList([...nominationList, movie]);
-    console.log("nominationList :>> ", nominationList);
     localStorage.setItem(
       "nominationList",
       JSON.stringify([...nominationList, movie])
@@ -50,6 +50,9 @@ function App() {
     <>
       <Banner nominationList={nominationList} />
 
+      <h1 className="h1-styling"> The Shoppies </h1>
+      <h2 className="h2-styling"> Nominate 5 of your favourite movies! </h2>
+     
       <Container>
         <Row>
           <Search checkNominations={checkNominations} nominate={nominate} />

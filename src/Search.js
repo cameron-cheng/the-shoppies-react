@@ -48,7 +48,7 @@ function Search({ checkNominations, nominate }) {
     <Container>
       <Card className="card">
         <Card.Header>
-          <h2>Search for Movies: </h2>
+          <h2 className="card-header">Search for Movies: </h2>
         </Card.Header>
       
         <Card.Body>
@@ -70,7 +70,7 @@ function Search({ checkNominations, nominate }) {
       <Container>
         <Card>
           <Card.Header>
-            <h2>Search Results</h2>
+            <h2 className="card-header">Search Results</h2>
           </Card.Header>
           <ul> {movies} </ul>
         </Card>

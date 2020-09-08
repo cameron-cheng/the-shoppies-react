@@ -61,3 +61,26 @@
 .li-spacing {
   margin-top: 10px;
 }
+
+h1.h1-styling {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 10px;
+}
+
+h2.h2-styling {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+body {
+  background-color: #F4F6F8 !important;
+}
+
+h2.card-header {
+  font-family: 'Roboto', sans-serif;
+  margin-top: 10px;
+  font-size: 20px;
+}

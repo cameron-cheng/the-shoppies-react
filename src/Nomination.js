@@ -33,7 +33,7 @@ function Nomination({ nominations, removeNomination }) {
       <Container>
         <Card>
           <Card.Header>
-            <h2> Nominations </h2>
+            <h2 className="card-header"> Nominations </h2>
           </Card.Header>
           <Card.Body>
             <ul> {nominees} </ul>
