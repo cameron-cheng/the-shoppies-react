@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+
 }
 
 .App-logo {
@@ -36,3 +37,12 @@
     transform: rotate(360deg);
   }
 }
+
+.input-spacing {
+  margin-right: 10px;
+}
+
+.card {
+  margin: 10px
+}
+

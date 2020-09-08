@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Search from "./Search";
 import Nomination from "./Nomination";
 import Banner from "./Banner";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
 import "./App.css";
 
 function App() {
@@ -38,18 +40,26 @@ function App() {
     );
     removeNominationList.splice(nominationIndex, 1);
     setNominationList(removeNominationList);
-    localStorage.setItem("nominationList", JSON.stringify(removeNominationList));
+    localStorage.setItem(
+      "nominationList",
+      JSON.stringify(removeNominationList)
+    );
   };
 
   return (
-    <div>
+    <>
       <Banner nominationList={nominationList} />
-      <Search checkNominations={checkNominations} nominate={nominate} />
-      <Nomination
-        nominations={nominationList}
-        removeNomination={removeNomination}
-      />
-    </div>
+
+      <Container>
+        <Row>
+          <Search checkNominations={checkNominations} nominate={nominate} />
+          <Nomination
+            nominations={nominationList}
+            removeNomination={removeNomination}
+          />
+        </Row>
+      </Container>
+    </>
   );
 }
 
