@@ -1,5 +1,7 @@
 Shopify Intership Challenge (The Shoppies) - UX Developer Intern & Web Developer Intern Challenge - Winter 2021
 
+Deployed at: https://the-shoppies-react.netlify.app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
