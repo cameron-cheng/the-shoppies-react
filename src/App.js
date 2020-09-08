@@ -53,6 +53,8 @@ function App() {
       <Container>
         <Row>
           <Search checkNominations={checkNominations} nominate={nominate} />
+        </Row>
+        <Row>
           <Nomination
             nominations={nominationList}
             removeNomination={removeNomination}

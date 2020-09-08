@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import Container from "react-bootstrap/Container";
+
 import "./App.css";
 
 const axios = require("axios");
@@ -42,11 +44,12 @@ function Search({ checkNominations, nominate }) {
 
   return (
     <>
+    <Container>
       <Card className="card">
         <Card.Header>
           <h2>Search for Movies: </h2>
         </Card.Header>
-
+      
         <Card.Body>
           <input
             type="text"
@@ -62,12 +65,17 @@ function Search({ checkNominations, nominate }) {
           <Button variant="primary" size="sm" onClick={search} disabled={!movieTitle}>Submit</Button>
         </Card.Body>
       </Card>
-      <Card>
-        <Card.Header>
-          <h2>Search Results</h2>
-        </Card.Header>
-        <ul> {movies} </ul>
-      </Card>
+      </Container>
+      <Container>
+        <Card>
+          <Card.Header>
+            <h2>Search Results</h2>
+          </Card.Header>
+          <ul> {movies} </ul>
+        </Card>
+      </Container>
+
+    
     </>
   );
 }

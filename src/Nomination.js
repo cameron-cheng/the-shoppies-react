@@ -1,6 +1,8 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
+import Container from "react-bootstrap/Container";
+
 import "./App.css";
 
 function Nomination({ nominations, removeNomination }) {
@@ -25,14 +27,18 @@ function Nomination({ nominations, removeNomination }) {
   });
 
   return (
-    <Card>
-      <Card.Header>
-        <h2> Nominations </h2>
-      </Card.Header>
-      <Card.Body>
-        <ul> {nominees} </ul>
-      </Card.Body>
-    </Card>
+    <>
+      <Container>
+        <Card>
+          <Card.Header>
+            <h2> Nominations </h2>
+          </Card.Header>
+          <Card.Body>
+            <ul> {nominees} </ul>
+          </Card.Body>
+        </Card>
+      </Container>
+    </>
   );
 }
 
