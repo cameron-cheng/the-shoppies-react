@@ -11,10 +11,11 @@ function Nomination({ nominations, removeNomination }) {
       <li key={movie.imdbID}>
         <p>
           {movie.Title} {movie.Year}{" "}
-        </p>
+        
         <Button
           variant="danger"
           size="sm"
+          className="button-spacing"
           onClick={() => {
             removeNomination(movie.imdbID);
           }}
@@ -22,6 +23,7 @@ function Nomination({ nominations, removeNomination }) {
           {" "}
           Remove{" "}
         </Button>
+        </p>
       </li>
     );
   });

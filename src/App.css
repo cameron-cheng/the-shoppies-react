@@ -40,6 +40,7 @@
 
 .input-spacing {
   margin-right: 10px;
+  width: 80%;
 }
 
 .card {
@@ -48,4 +49,15 @@
 
 .alert-position {
   position:fixed;
+  text-align: center;
+}
+
+.button-spacing {
+  margin-left: 10px;
+  margin-right: 10px;
+  float: right;
+}
+
+.li-spacing {
+  margin-top: 10px;
 }

@@ -25,19 +25,20 @@ function Search({ checkNominations, nominate }) {
 
   const movies = searchResults.map((movie) => {
     return (
-      <li key={movie.imdbID}>
+      <li className="li-spacing" key={movie.imdbID}>
         <p>
           {movie.Title} ({movie.Year})
-        </p>
+        
         <Button
+          className="button-spacing"
           variant="primary"
           onClick={() => nominate(movie)}
           disabled={!checkNominations(movie.imdbID)}
           size="sm"
         >
-          {" "}
-          Nominate{" "}
+           Nominate
         </Button>
+        </p>
       </li>
     );
   });
