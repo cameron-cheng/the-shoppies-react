@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import Search from "./Search";
 import Nomination from "./Nomination";
+import Banner from "./Banner"
 import "./App.css";
+
 
 function App() {
   const [nominationList, setNominationList] = useState([]);
+  
   const checkNominations = (movieID) => {
     const movieIDs = nominationList.map((movie) => movie.imdbID);
     if (movieIDs.includes(movieID)) return false;
@@ -30,6 +33,7 @@ function App() {
 
   return (
     <div>
+      <Banner nominationList={nominationList}/>
       <Search checkNominations={checkNominations} nominate={nominate} />
       <Nomination
         nominations={nominationList}

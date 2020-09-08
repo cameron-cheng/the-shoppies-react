@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from 'react-bootstrap/Button' 
 
 const axios = require("axios");
 const API_KEY = "45aaa6eb";
@@ -12,7 +13,6 @@ function Search( { checkNominations, nominate }) {
   const search = async () => {
     try {
       const response = await axios.get(`${apiURL}&s=${movieTitle}`);
-      console.log(response.data.Search);
       setSearchResults(response.data.Search);
     } catch (error) {
       console.error(error);
@@ -23,7 +23,7 @@ function Search( { checkNominations, nominate }) {
     return (
       <li key={movie.imdbID}>
         <p>{movie.Title} ({movie.Year})</p>
-        <button onClick={() => nominate(movie)} disabled={!checkNominations(movie.imdbID)}> Nominate </button>
+        <Button variant="primary" onClick={() => nominate(movie)} disabled={!checkNominations(movie.imdbID)}> Nominate </Button>
       </li> 
     )
   })
@@ -39,7 +39,7 @@ function Search( { checkNominations, nominate }) {
         value={movieTitle}
       />
 
-      <button onClick={search}>Submit</button>
+      <Button onClick={search}>Submit</Button>
 
       <h2>Search Results</h2>
       <ul> {movies} </ul>
